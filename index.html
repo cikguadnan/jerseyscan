@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>JerseyScan — Find Your Number</title>
+<meta name="theme-color" content="#07110c">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header><div class="ball">⚽</div><div><h1>JERSEY<span>SCAN</span></h1><p>SCAN YOUR FACE. FIND YOUR NUMBER.</p></div></header>
+
+  <section id="home" class="screen active">
+    <div class="hero">
+      <div class="number-cloud"><b>7</b><i>10</i><em>9</em><strong>11</strong><small>23</small></div>
+      <h2>WHAT'S YOUR<br><span>NUMBER?</span></h2>
+      <p>Let JerseyScan match your football vibe with an iconic shirt number.</p>
+    </div>
+    <button class="primary" id="startBtn">📷 START FACE SCAN</button>
+    <button class="secondary" id="demoBtn">TRY WITHOUT CAMERA</button>
+    <p class="privacy">🔒 Your photo stays on your device. Just for fun.</p>
+  </section>
+
+  <section id="scanner" class="screen">
+    <div class="camera-wrap">
+      <video id="video" autoplay playsinline muted></video>
+      <div class="shade"></div><div class="face-frame"><span></span></div>
+      <div class="scanline"></div>
+      <div class="camera-label" id="cameraLabel">POSITION FACE IN FRAME</div>
+    </div>
+    <div class="scan-info"><b id="scanTitle">Looking for a face…</b><p id="scanText">Keep your face inside the frame</p></div>
+    <button class="secondary" id="cancelBtn">CANCEL</button>
+  </section>
+
+  <section id="analysing" class="screen center">
+    <div class="loader"><div>⚽</div></div>
+    <h2>READING YOUR<br><span>FOOTBALL VIBE</span></h2>
+    <div class="steps"><p class="on">✓ Face locked</p><p id="s2">○ Matching football energy</p><p id="s3">○ Searching iconic numbers</p></div>
+  </section>
+
+  <section id="result" class="screen">
+    <p class="eyebrow">JERSEYSCAN MATCH</p>
+    <div class="result-card">
+      <div class="glow"></div><p>YOUR NUMBER IS</p><div id="jerseyNumber" class="big-number">7</div>
+      <h2 id="archetype">THE GAME CHANGER</h2><div class="meter"><span id="meter"></span></div><small id="match">94% VIBE MATCH</small>
+    </div>
+    <div class="reason"><h3>WHY THIS NUMBER?</h3><p id="reasonText"></p></div>
+    <div class="icons"><h3>ICONIC #<span id="iconNumber">7</span>s</h3><div id="players" class="player-list"></div></div>
+    <button class="primary" id="againBtn">📷 SCAN NEXT PLAYER</button>
+    <button class="secondary" id="shareBtn">↗ SHARE MY NUMBER</button>
+    <p class="disclaimer">For entertainment only — JerseyScan doesn't measure football ability or personality.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body></html>
